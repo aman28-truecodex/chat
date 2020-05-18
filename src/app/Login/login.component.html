@@ -1,0 +1,44 @@
+<div class="container mt-4">
+<section class="form-gradient mt-4">
+    <div class="card">
+      <div class="header pt-3 peach-gradient">
+       <div class="row d-flex justify-content-center">
+          <h3 class="white-text mb-3 pt-3 font-weight-bold">
+              <b>Log in</b>
+            </h3>
+        </div>
+         <div class="row mt-2 mb-3 d-flex justify-content-center">
+          <a class="fa-lg p-2 m-2 fb-ic"><i class="fab fa-facebook-f white-text fa-lg"> </i></a>
+          <a class="fa-lg p-2 m-2 tw-ic"><i class="fab fa-twitter white-text fa-lg"> </i></a>
+          <a class="fa-lg p-2 m-2 gplus-ic"><i class="fab fa-google-plus-g white-text fa-lg"> </i></a>
+        </div>
+      </div>
+      <div class="card-body mx-4 mt-4">
+        <form [formGroup]='GroupS'>
+        <div class="md-form">
+          <input type="text" id="Form-email3" formControlName='gmail' placeholder="USER NAME" 
+          class="form-control mt-2">
+        </div>
+        <div class="md-form pb-1 pb-md-3 mt-4">
+          <input type="password" formControlName='password' placeholder="USER PASSWORD" id="Form-pass3" class="form-control">        
+          <p class="font-small grey-text d-flex justify-content-end mt-4">Forgot <a
+              class="dark-grey-text ml-1 font-weight-bold"> Password?</a></p>
+        </div>
+        <div class="row d-flex align-items-center mt-4">
+          <div class="col-md-1 col-md-5 d-flex align-items-start">
+            <div class="text-center">
+              <button type="button" 
+              class="btn btn-grey btn-rounded z-depth-1a bg-primary"
+              (click)='LoginMEM()'
+              [disabled]='!GroupS.valid'
+              >
+              Log in</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </section>
+</div>
+<ngx-spinner> </ngx-spinner>

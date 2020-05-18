@@ -1,0 +1,54 @@
+
+<div class="card gradient">
+    <div class="card-body">
+      <div class="row px-lg-1 px-1">
+        <div class="col-md-12 col-xl-12 pl-md-3 px-lg-auto px-0">
+          <span class="btn-group">
+            <button class="btn btn-danger btn-sm dropdown-toggle"  style="font-size:11px" type="button"
+             data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span style="color: black;font-size:12px;margin-right:10px;">
+                <b>OnLine</b><i class="fas fa-star"></i><span class="counter counter-sm">22</span></span>
+            </button>
+              <div class="dropdown-menu bg-primary" style="width:20px !important;">
+                <a class="dropdown-item" *ngFor='let Login of LoginUser; let i=index'>{{i+1}}.{{Login}}</a>
+                <a class="dropdown-item" (click)='LogOut()'>LogOut</a>
+              </div>
+          </span>
+          <span style ="
+          background-color:#dd2c00;border-radius:5px; padding:8px; position: relative;top:2px; color:hsl(0, 100%, 0%);
+          "> Welcome:{{user}}</span>
+          <div class="chat-message">
+            <ul class="list-unstyled chat-1 scrollbar-light-blue"
+            [ngStyle]="{'background' : 'url(https://app28chat.herokuapp.com/bgmsg.jpg)'}"
+            >
+            <div id='disChat' style="margin-top:18px;margin-bottom:18px;">
+             <!--Message-->
+            </div>
+            </ul>
+            <div class="input-group" style="margin-top: auto;">
+              <input type="text"  #SMS style="background-color: darkgray; color:black;
+              border-radius:5px;  height:40px; margin:auto;
+              width:75%;
+              " />
+               <i (click)='StartChat()' style="background-color:#ff0000; 
+               position: relative;right:20px;border-radius:50%;padding:7.5px;
+               font-size:25px;color:#0000ff" class="far fa-share-square"></i>
+              </div>
+              
+  </div>
+  <form class="md-form">
+    <div class="file-field big">
+      <a class="btn-floating btn-lg pink lighten-1 mt-0 float-left">
+        <i class="fas fa-paperclip" aria-hidden="true"></i>
+        <input type="file">
+      </a>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
