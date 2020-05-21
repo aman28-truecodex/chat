@@ -10,12 +10,14 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './chat/chat.component';
 import { MemberComponent } from './Login/login.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NgxSpinnerModule } from "ngx-spinner"; 
+import { NgxSpinnerModule } from "ngx-spinner";
+import { WebstreamComponent } from './webstream/webstream.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
-    MemberComponent
+    MemberComponent,
+    WebstreamComponent
   ],
   imports: [
     BrowserModule,

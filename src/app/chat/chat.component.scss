@@ -68,3 +68,24 @@ a{
   height: 3.2rem; }
   .file-field.big .file-path-wrapper .file-path {
   height: 3rem; }
+
+
+  #loginUsr{
+    height:200px;
+    overflow:scroll;
+    overflow-x:hidden;
+  }
+  
+#loginUsr::-webkit-scrollbar-track {
+  -webkit-box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color:indianred;
+  border-radius: 10px; }
+  
+  #loginUsr::-webkit-scrollbar {
+  width:10px;
+  background-color:grey; }
+  
+  #loginUsr::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color:blue }

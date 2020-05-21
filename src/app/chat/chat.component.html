@@ -8,16 +8,25 @@
              data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               <span style="color: black;font-size:12px;margin-right:10px;">
-                <b>OnLine</b><i class="fas fa-star"></i><span class="counter counter-sm">22</span></span>
+                <b>OnLine</b><i class="fas fa-star"></i><span class="counter counter-sm" id='Num'></span>
+              </span>
             </button>
-              <div class="dropdown-menu bg-primary" style="width:20px !important;">
-                <a class="dropdown-item" *ngFor='let Login of LoginUser; let i=index'>{{i+1}}.{{Login}}</a>
-                <a class="dropdown-item" (click)='LogOut()'>LogOut</a>
+              <div class="dropdown-menu" style="background-color: brown;" id="loginUsr">
+                <!-- Login User-->
               </div>
           </span>
+          <span (click)='VidCall()'
+           style="font-size:40px;color:crimson;padding:2px;"
+          ><i class="fas fa-video mr-2" style="margin:6px;position: relative;top:9px;"></i>
+        </span>
+
           <span style ="
-          background-color:#dd2c00;border-radius:5px; padding:8px; position: relative;top:2px; color:hsl(0, 100%, 0%);
-          "> Welcome:{{user}}</span>
+          background-color:#dd2c00;border-radius:5px; padding:8.7px; position: relative;top:2px; 
+          cursor: pointer;
+          color:hsl(0, 100%, 0%);
+          " (click)='LogOut()'> LogOut<span  style="margin-left:8px;"><i class="fas fa-sign-out-alt">
+
+          </i></span></span>
           <div class="chat-message">
             <ul class="list-unstyled chat-1 scrollbar-light-blue"
             [ngStyle]="{'background' : 'url(https://app28chat.herokuapp.com/bgmsg.jpg)'}"
