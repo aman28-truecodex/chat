@@ -27,7 +27,7 @@ export class ChatComponent {
     if(!localStorage.getItem('user')){
       this.Router.navigate(['Login']);
     }
-    this.socket=io('http://localhost:2020/');
+    this.socket=io('https://app28chat.herokuapp.com/');
     this.socket.on('chat-message', function(data,Array){
       if(data.SMS){
         var smsn=document.createElement('p');

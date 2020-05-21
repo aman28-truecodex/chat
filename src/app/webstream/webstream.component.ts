@@ -11,7 +11,7 @@ export class WebstreamComponent implements AfterViewInit{
   constructor(private Router:Router) {
     var div=document.getElementById('div'); 
     console.log(div);
-    this.socket=io('http://localhost:2020/');
+    this.socket=io('https://app28chat.herokuapp.com/');
     this.socket.emit('chat-message', {
       status:true,
       StmUsr:localStorage.getItem('user')
