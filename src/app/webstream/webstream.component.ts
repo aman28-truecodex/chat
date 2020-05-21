@@ -12,27 +12,26 @@ export class WebstreamComponent implements AfterViewInit{
     var div=document.getElementById('div'); 
     console.log(div);
     this.socket=io('https://app28chat.herokuapp.com/');
-    this.socket.emit('chat-message', {
-      status:true,
-      StmUsr:localStorage.getItem('user')
-   });
+    navigator.mediaDevices.getUserMedia({video:true, audio:false}).then((stream)=>{
+      this.socket.emit('chat-message', {
+        stream:stream,
+        StmUsr:localStorage.getItem('user')
+     });
+    }).catch((err)=>{console.log(err)});
 }
 Back(){
 this.Router.navigate(['Login/'+localStorage.getItem('user')]);
   }
   ngAfterViewInit(){
     
-    this.socket.on('chat-message', function(data,Array){
-    navigator.mediaDevices.getUserMedia({video:true, audio:false}).then((stream)=>{
+    this.socket.on('chat-message', function(data){
       var div=document.getElementById('div'); 
       var video=document.createElement('video');
-      var button=document.createElement('button');
-      video.style.width='380px';
-      video.style.height='350px';  
-      video.srcObject=stream;
+      video.style.width='400px';
+      video.style.height='300px';  
+      video.srcObject=data.stream;
       video.play();
       div.appendChild(video);
-    }).catch((err)=>{console.log(err)});
   });  
   }
 }
